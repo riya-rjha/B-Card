@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galaxy Birthday Wish</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<script>
+  const audio = document.getElementById("bg-music");
+  const toggleBtn = document.getElementById("music-toggle");
+
+  // Start muted (most browsers block autoplay with sound)
+  audio.muted = true;
+
+  toggleBtn.addEventListener("click", () => {
+    if (audio.muted) {
+      audio.muted = false;
+      toggleBtn.textContent = "🔇 Mute Music";
+    } else {
+      audio.muted = true;
+      toggleBtn.textContent = "🔊 Play Music";
+    }
+  });
+</script>
+
+<body>
+  <div class="galaxy">
+    <!-- Stars background -->
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <!-- Planets -->
+    <div class="planet planet1"></div>
+    <div class="planet planet2"></div>
+    <div class="planet planet3"></div>
+
+    <!-- Birthday Message -->
+    <div class="birthday-message">
+      <h1>🎉 Happy Birthday Prapti 🎉</h1>
+      <p>May this day bring immense plesasure for you✨</p>
+    </div>
+  </div>
+  <div class="galaxy">
+  <!-- Stars background -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
+  <div class="stars3"></div>
+
+  <!-- Planets -->
+  <div class="planet planet1"></div>
+  <div class="planet planet2"></div>
+  <div class="planet planet3"></div>
+
+  <!-- Shooting Stars -->
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- Birthday Message -->
+  <div class="birthday-message">
+    <h1>🎉 Happy Birthday 🎉</h1>
+    <p>May your day be as magical as the galaxy ✨</p>
+  </div>
+</div>
+<!-- Background Music -->
+<audio id="bg-music" autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Unmute Button -->
+<button id="music-toggle">🔊 Play Music</button>
+
+</body>
+</html>
